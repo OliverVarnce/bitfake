@@ -8,6 +8,7 @@ router.get('/:key', (req, res, next) => {
 
   const ip = (req.headers['x-forwarded-for'] || '').split(',')[0]
       || req.connection.remoteAddress;
+  console.log("===============================IP ", ip)
 
   res.status(200).json({
     "ip": ip ,
